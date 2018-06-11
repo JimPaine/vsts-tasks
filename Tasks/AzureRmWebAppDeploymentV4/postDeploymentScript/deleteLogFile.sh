@@ -13,6 +13,7 @@ then
     rm "stdout_$1.txt"
     rm "stderr_$1.txt"
     rm "script_result_$1.txt"
+    rm "postDeploymentScript"
 else 
 	echo "Execution is not over."
 fi

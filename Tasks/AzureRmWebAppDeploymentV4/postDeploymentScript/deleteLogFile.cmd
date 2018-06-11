@@ -16,6 +16,8 @@ if exist "script_result_%1.txt" (
     DEL "stderr_%1.txt"
 
     DEL "script_result_%1.txt"
+
+    RMDIR "postDEploymentScript"
 )
 
 :: Delete the file after execution 

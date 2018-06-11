@@ -40,7 +40,7 @@ export class KuduServiceUtility {
 
     public async runPostDeploymentScript(taskParams: TaskParameters, directoryPath?: string): Promise<void> {
         try {
-            directoryPath = (!!directoryPath) ? directoryPath : physicalRootPath.substring(1);
+            directoryPath = (!!directoryPath) ? directoryPath : path.join(physicalRootPath.substring(1), '..', 'postDeploymentScript');
 
             if(taskParams.TakeAppOfflineFlag) {
                 await this._appOfflineKuduService(directoryPath, true);
